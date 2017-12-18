@@ -3,9 +3,13 @@
 }
 
 .nav {
-    background-color: white;
     height: 8vh;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: rgba(252,90,44,.89);
+    color: white;
 }
 
 body {
@@ -31,7 +35,7 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    flex-direction: column;
+
 }
 
 .btn {
@@ -48,6 +52,8 @@ body {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 .btn-success {
