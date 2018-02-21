@@ -28,7 +28,6 @@ class SearchForm extends React.Component {
         return (
             <div className="searchContainer" onChange={this.onChangeHandler} value={this.state.cityState} style={{flexDirection: this.props.direction}}>
                 <input type="text" className="form-control" placeholder="College Park, Maryland"/>
-                <button onClick={this.onClickHandler} className="btn btn-success">Get Weather</button>
                 <Link className="btn btn-success" to={
                     {
                         pathname: '/forecast',
