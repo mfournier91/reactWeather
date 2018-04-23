@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom');
 const Axios = require('axios');
 const secretKey = require('./Config').apiKey;
 const helpers = require('../helpers/helpers.js')
+const Loading = require('./Loading')
 
 class Forecast extends React.Component {
     constructor(props){
@@ -28,7 +29,8 @@ class Forecast extends React.Component {
     render() {
         return (
             <div>
-                {this.state.loading ? <p>Loading</p>: <p>{this.state.forecast.data.weather[0].main}</p>}
+                {/*<Loading text="Loooading girl" speed={300}/>*/}
+                {this.state.loading ? <Loading text="Loading" speed={300}/>: <p>{this.state.forecast.data.weather[0].main}</p>}
             </div>
         );
     }
