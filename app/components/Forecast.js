@@ -36,7 +36,8 @@ class Forecast extends React.Component {
                         <Link to={{
                             pathname: `/details/${this.state.city}`,
                             state: {
-                                dailyForecast
+                                dailyForecast,
+                                city: this.state.city
                             }
                         }} key={dailyForecast.dt} >
                             <ForecastItem  key={dailyForecast.dt} dt={dailyForecast.dt} icon={dailyForecast.weather[0].icon}/></Link>

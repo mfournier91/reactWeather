@@ -11,6 +11,15 @@ const helpers = {
             }
             return (false);
         }
+    },
+    initialsToUpper: (mystring) => {
+        mystring = mystring.split(" ").map((word) => {word = word.charAt(0).toUpperCase() + word.substring(1); console.log(word); return word}).join(" ")
+
+        return mystring
+    },
+
+    kelvinToFahrenheit: (k) => {
+        return parseInt(1.8*(k-273)+32)
     }
 }
 
