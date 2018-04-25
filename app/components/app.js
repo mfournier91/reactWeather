@@ -3,10 +3,12 @@ const ReactDOM = require('react-dom');
 const Header = require('./Header')
 const Home = require('./Home');
 const ReactRouter = require('react-router-dom');
-const Forecast = require('./Forecast')
+const Forecast = require('./Forecast');
+const Detail = require('./Detail');
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Switch = ReactRouter.Switch;
+
 
 class App extends React.Component {
     render() {
@@ -18,6 +20,7 @@ class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={Home}/>
                             <Route path="/forecast" component={Forecast} />
+                            <Route path="/details" component={Detail} />
                             <Route render={() => {
                                 return (<p>Not Found </p>)
                             }} />
